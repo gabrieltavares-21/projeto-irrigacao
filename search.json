@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sistema Inteligente de Irrigação",
+    "section": "",
+    "text": "Este projeto utiliza técnicas de Ciência de Dados para analisar fatores que influenciam a necessidade de irrigação agrícola.\nO sistema foi desenvolvido para ser utilizado por agricultores que desejam otimizar o uso da água na agricultura, e possui três objetivos principais:\n\nrealizar uma análise exploratória dos dados;\ncompreender os fatores associados à necessidade de irrigação;\npermitir que o usuário simule diferentes cenários por meio de um modelo preditivo.\n\n\n\n\nUtilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nRecomendações"
+  },
+  {
+    "objectID": "index.html#objetivo",
+    "href": "index.html#objetivo",
+    "title": "Sistema Inteligente de Irrigação",
+    "section": "",
+    "text": "Este projeto utiliza técnicas de Ciência de Dados para analisar fatores que influenciam a necessidade de irrigação agrícola.\nO sistema foi desenvolvido para ser utilizado por agricultores que desejam otimizar o uso da água na agricultura, e possui três objetivos principais:\n\nrealizar uma análise exploratória dos dados;\ncompreender os fatores associados à necessidade de irrigação;\npermitir que o usuário simule diferentes cenários por meio de um modelo preditivo."
+  },
+  {
+    "objectID": "index.html#navegação",
+    "href": "index.html#navegação",
+    "title": "Sistema Inteligente de Irrigação",
+    "section": "",
+    "text": "Utilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nRecomendações"
+  },
+  {
+    "objectID": "analise.html",
+    "href": "analise.html",
+    "title": "Análise Exploratória",
+    "section": "",
+    "text": "Nesta etapa foi realizada uma Análise Exploratória dos Dados (AED) com o objetivo de compreender a distribuição das variáveis e identificar quais características apresentavam associação com a necessidade de irrigação.\nAs variáveis foram divididas em dois grupos:\n\nVariáveis categóricas nominais;\nVariáveis quantitativas contínuas.\n\nA partir dessa análise, foram selecionadas as variáveis que apresentaram maior potencial explicativo para a construção do modelo estatístico."
+  },
+  {
+    "objectID": "recomendacoes.html",
+    "href": "recomendacoes.html",
+    "title": "Recomendações",
+    "section": "",
+    "text": "Recomendações\nApós a previsão realizada pelo modelo, esta página apresentará recomendações de irrigação de acordo com o resultado obtido.\nExemplos:\n\nIrrigação baixa\nIrrigação média\nIrrigação alta"
+  },
+  {
+    "objectID": "simulador.html",
+    "href": "simulador.html",
+    "title": "Simulador",
+    "section": "",
+    "text": "O simulador foi concebido como um produto de dados para auxiliar na recomendação da necessidade de irrigação de uma cultura agrícola. A partir de informações relacionadas ao solo, às condições climáticas e ao tipo de cultivo, o modelo de classificação estima a categoria de necessidade de irrigação, classificando-a em Low, Medium ou High.\n\n\n\nO funcionamento do produto segue as seguintes etapas:\n\n\n\n\n\nflowchart TD\n    A[Entrada dos dados] --&gt; B[Pré-processamento]\n    B --&gt; C[Modelo de Classificação]\n    C --&gt; D[Predição]\n    D --&gt; E[Recomendação da necessidade de irrigação]\n\n\n\n\n\n\n\n\n\nNa versão final do simulador, o usuário poderá informar variáveis como:\n\nTemperatura;\nUmidade do ar;\nUmidade do solo;\nTipo de solo;\nTipo de cultura;\nQuantidade de chuva;\nDemais variáveis utilizadas pelo modelo.\n\nEssas informações serão processadas pelo modelo treinado durante este projeto.\n\n\n\nApós o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nA probabilidade associada à previsão;\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação.\n\n\n\n\n\n\n\nCampo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High\n\n\nProbabilidade da previsão: 87%\n\n\n\n\nNesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo."
+  },
+  {
+    "objectID": "sobre.html",
+    "href": "sobre.html",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.\nA proposta consiste em:\n\ncompreender o comportamento das variáveis do conjunto de dados;\nidentificar padrões relacionados à necessidade de irrigação;\ndesenvolver um modelo capaz de prever o nível de irrigação necessário;\ndisponibilizar essas informações em um ambiente web interativo.\n\n\n\n\n\nO conjunto de dados utilizado foi obtido na competição Kaggle Playground Series - Season 6, Episode 4.\nEssa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.\nFonte dos dados:\n https://www.kaggle.com/competitions/playground-series-s6e4/data \n\n\n\n\n\n\n\n\n\n\n\nVariável\nDescrição\n\n\n\n\nCrop_Type\nTipo de cultura agrícola.\n\n\nSoil_Type\nTipo de solo utilizado no cultivo.\n\n\nRegion\nRegião onde a cultura está localizada.\n\n\nTemperature\nTemperatura ambiente (°C).\n\n\nWeather_Condition\nCondição climática observada.\n\n\nHumidity\nUmidade relativa do ar (%).\n\n\nWind_Speed\nVelocidade do vento.\n\n\nPrecipitation\nVolume de precipitação (chuva).\n\n\nIrrigation_Need\nNível de irrigação necessário (variável resposta).\n\n\n\n\n\n\n\nO desenvolvimento deste trabalho foi dividido em quatro etapas principais.\n\nExploração e compreensão dos dados.\nAnálise estatística e visualização.\nConstrução de um modelo estatístico.\nDesenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário.\n\n\n\n\n\nO website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.\nNele será possível:\n\nconhecer a base de dados utilizada;\nvisualizar os principais resultados da análise exploratória;\nrealizar simulações utilizando um modelo preditivo;\nobter recomendações de irrigação com base nas características informadas pelo usuário.\n\n\n\n\n\nDurante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:\n\nPython\nPandas\nNumPy\nMatplotlib\nScikit-Learn\nQuarto\nGit e GitHub"
+  },
+  {
+    "objectID": "sobre.html#estrutura-do-projeto",
+    "href": "sobre.html#estrutura-do-projeto",
+    "title": "Sobre",
+    "section": "",
+    "text": "Coleta dos dados\nAnálise exploratória\nConstrução do modelo\nSistema interativo"
+  },
+  {
+    "objectID": "sobre.html#objetivo",
+    "href": "sobre.html#objetivo",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.\nA proposta consiste em:\n\ncompreender o comportamento das variáveis do conjunto de dados;\nidentificar padrões relacionados à necessidade de irrigação;\ndesenvolver um modelo capaz de prever o nível de irrigação necessário;\ndisponibilizar essas informações em um ambiente web interativo."
+  },
+  {
+    "objectID": "sobre.html#base-de-dados",
+    "href": "sobre.html#base-de-dados",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "O conjunto de dados utilizado foi obtido na competição Kaggle Playground Series - Season 6, Episode 4.\nEssa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.\nFonte dos dados:\n https://www.kaggle.com/competitions/playground-series-s6e4/data"
+  },
+  {
+    "objectID": "sobre.html#variáveis-do-conjunto-de-dados",
+    "href": "sobre.html#variáveis-do-conjunto-de-dados",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "Variável\nDescrição\n\n\n\n\nCrop_Type\nTipo de cultura agrícola.\n\n\nSoil_Type\nTipo de solo utilizado no cultivo.\n\n\nRegion\nRegião onde a cultura está localizada.\n\n\nTemperature\nTemperatura ambiente (°C).\n\n\nWeather_Condition\nCondição climática observada.\n\n\nHumidity\nUmidade relativa do ar (%).\n\n\nWind_Speed\nVelocidade do vento.\n\n\nPrecipitation\nVolume de precipitação (chuva).\n\n\nIrrigation_Need\nNível de irrigação necessário (variável resposta)."
+  },
+  {
+    "objectID": "sobre.html#fluxo-do-projeto",
+    "href": "sobre.html#fluxo-do-projeto",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "O desenvolvimento deste trabalho foi dividido em quatro etapas principais.\n\nExploração e compreensão dos dados.\nAnálise estatística e visualização.\nConstrução de um modelo estatístico.\nDesenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário."
+  },
+  {
+    "objectID": "sobre.html#objetivo-do-website",
+    "href": "sobre.html#objetivo-do-website",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "O website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.\nNele será possível:\n\nconhecer a base de dados utilizada;\nvisualizar os principais resultados da análise exploratória;\nrealizar simulações utilizando um modelo preditivo;\nobter recomendações de irrigação com base nas características informadas pelo usuário."
+  },
+  {
+    "objectID": "sobre.html#tecnologias-utilizadas",
+    "href": "sobre.html#tecnologias-utilizadas",
+    "title": "Sobre o Projeto",
+    "section": "",
+    "text": "Durante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:\n\nPython\nPandas\nNumPy\nMatplotlib\nScikit-Learn\nQuarto\nGit e GitHub"
+  },
+  {
+    "objectID": "analise.html#objetivo",
+    "href": "analise.html#objetivo",
+    "title": "Análise Exploratória",
+    "section": "",
+    "text": "Nesta etapa foi realizada uma Análise Exploratória dos Dados (AED) com o objetivo de compreender a distribuição das variáveis e identificar quais características apresentavam associação com a necessidade de irrigação.\nAs variáveis foram divididas em dois grupos:\n\nVariáveis categóricas nominais;\nVariáveis quantitativas contínuas.\n\nA partir dessa análise, foram selecionadas as variáveis que apresentaram maior potencial explicativo para a construção do modelo estatístico."
+  },
+  {
+    "objectID": "analise.html#necessidade-de-irrigação-tipo-de-solo",
+    "href": "analise.html#necessidade-de-irrigação-tipo-de-solo",
+    "title": "Análise Exploratória",
+    "section": "Necessidade de Irrigação × Tipo de Solo",
+    "text": "Necessidade de Irrigação × Tipo de Solo\n\n\n\n\n\nO tipo de solo Sandy (Arenoso) é o que necessita maior irrigação, seguido pelo solo Clay (Argiloso), enquanto o solo Silty (Siltoso) e Loamy (Franco) apresentam menor necessidade de irrigação."
+  },
+  {
+    "objectID": "analise.html#necessidade-de-irrigação-tipo-de-cultura",
+    "href": "analise.html#necessidade-de-irrigação-tipo-de-cultura",
+    "title": "Análise Exploratória",
+    "section": "Necessidade de Irrigação × Tipo de Cultura",
+    "text": "Necessidade de Irrigação × Tipo de Cultura\n\n\n\n\n\nO tipo de cultura apresentou comportamento diferente quanto à necessidade de irrigação, onde Milho e Cana de Açúcar apresentaram maior necessidade de irrigação, enquanto Arroz apresentou menor necessidade."
+  },
+  {
+    "objectID": "analise.html#necessidade-de-irrigação-forma-de-irrigação",
+    "href": "analise.html#necessidade-de-irrigação-forma-de-irrigação",
+    "title": "Análise Exploratória",
+    "section": "Necessidade de Irrigação × Forma de Irrigação",
+    "text": "Necessidade de Irrigação × Forma de Irrigação\n\n\n\n\n\nOs diferentes métodos de irrigação apresentaram distribuições distintas entre as categorias da variável resposta, em que o método por canal junto com o método por aspersão apresentam maior necessidade de irrigação."
+  },
+  {
+    "objectID": "analise.html#necessidade-de-irrigação-fonte-de-água",
+    "href": "analise.html#necessidade-de-irrigação-fonte-de-água",
+    "title": "Análise Exploratória",
+    "section": "Necessidade de Irrigação × Fonte de Água",
+    "text": "Necessidade de Irrigação × Fonte de Água\n\n\n\n\n\nA distribuição observada mostra que a água utilizada de rios apresenta o maior gasto em irrigação, enquanto água retirada de poços apresenta menor gasto."
+  },
+  {
+    "objectID": "analise.html#umidade-do-solo-necessidade-de-irrigação",
+    "href": "analise.html#umidade-do-solo-necessidade-de-irrigação",
+    "title": "Análise Exploratória",
+    "section": "Umidade do Solo × Necessidade de Irrigação",
+    "text": "Umidade do Solo × Necessidade de Irrigação\n\n\n\n\n\nA umidade do solo apresentou diferenças entre as categorias de irrigação, indicando que solos com menor umidade podem apresentar maior necessidade de irrigação, enquanto uma boa umidade pode reduzir a necessidade de irrigação."
+  },
+  {
+    "objectID": "analise.html#precipitação-necessidade-de-irrigação",
+    "href": "analise.html#precipitação-necessidade-de-irrigação",
+    "title": "Análise Exploratória",
+    "section": "Precipitação × Necessidade de Irrigação",
+    "text": "Precipitação × Necessidade de Irrigação\n\n\n\n\n\nOs níveis de precipitação apresentaram comportamento distinto entre as classes da variável resposta, indicando que quanto menor a quantidade de chuvas na área, maior é a necessidade de irrigação do solo."
+  },
+  {
+    "objectID": "analise.html#temperatura-necessidade-de-irrigação",
+    "href": "analise.html#temperatura-necessidade-de-irrigação",
+    "title": "Análise Exploratória",
+    "section": "Temperatura × Necessidade de Irrigação",
+    "text": "Temperatura × Necessidade de Irrigação\n\n\n\n\n\nA temperatura apresentou diferenças na distribuição entre os grupos analisados, indicando que solos com temperaturas mais elevadas podem apresentar maior necessidade de irrigação."
+  },
+  {
+    "objectID": "simulador.html#objetivo",
+    "href": "simulador.html#objetivo",
+    "title": "Simulador",
+    "section": "",
+    "text": "O simulador foi concebido como um produto de dados para auxiliar na recomendação da necessidade de irrigação de uma cultura agrícola. A partir de informações relacionadas ao solo, às condições climáticas e ao tipo de cultivo, o modelo de classificação estima a categoria de necessidade de irrigação, classificando-a em Low, Medium ou High."
+  },
+  {
+    "objectID": "simulador.html#como-o-simulador-funciona",
+    "href": "simulador.html#como-o-simulador-funciona",
+    "title": "Simulador",
+    "section": "",
+    "text": "O funcionamento do produto segue as seguintes etapas:\n\n\n\n\n\nflowchart TD\n    A[Entrada dos dados] --&gt; B[Pré-processamento]\n    B --&gt; C[Modelo de Classificação]\n    C --&gt; D[Predição]\n    D --&gt; E[Recomendação da necessidade de irrigação]"
+  },
+  {
+    "objectID": "simulador.html#informações-que-serão-utilizadas",
+    "href": "simulador.html#informações-que-serão-utilizadas",
+    "title": "Simulador",
+    "section": "",
+    "text": "Na versão final do simulador, o usuário poderá informar variáveis como:\n\nTemperatura;\nUmidade do ar;\nUmidade do solo;\nTipo de solo;\nTipo de cultura;\nQuantidade de chuva;\nDemais variáveis utilizadas pelo modelo.\n\nEssas informações serão processadas pelo modelo treinado durante este projeto."
+  },
+  {
+    "objectID": "simulador.html#resultado-esperado",
+    "href": "simulador.html#resultado-esperado",
+    "title": "Simulador",
+    "section": "",
+    "text": "Após o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nA probabilidade associada à previsão;\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação."
+  },
+  {
+    "objectID": "simulador.html#protótipo-da-interface",
+    "href": "simulador.html#protótipo-da-interface",
+    "title": "Simulador",
+    "section": "",
+    "text": "Campo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High\n\n\nProbabilidade da previsão: 87%"
+  },
+  {
+    "objectID": "simulador.html#desenvolvimento-futuro",
+    "href": "simulador.html#desenvolvimento-futuro",
+    "title": "Simulador",
+    "section": "",
+    "text": "Nesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo."
+  }
+]
