@@ -1,0 +1,24 @@
+---
+title: "Sistema Inteligente de Irrigação"
+---
+
+# Sistema Inteligente de Irrigação
+
+## Objetivo
+
+Este projeto utiliza técnicas de Ciência de Dados para analisar fatores que influenciam a necessidade de irrigação agrícola.
+
+O sistema foi desenvolvido para ser utilizado por agricultores que desejam otimizar o uso da água na agricultura, e possui três objetivos principais:
+
+- realizar uma análise exploratória dos dados;
+- compreender os fatores associados à necessidade de irrigação;
+- permitir que o usuário simule diferentes cenários por meio de um modelo preditivo.
+
+## Navegação
+
+Utilize o menu superior para acessar as páginas do projeto.
+
+- Sobre
+- Análise
+- Simulador
+- Recomendações

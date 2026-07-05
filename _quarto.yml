@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Sistema Inteligente de Irrigação"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: sobre.qmd
+        text: Sobre
+      - href: analise.qmd
+        text: Análise
+      - href: simulador.qmd
+        text: Simulador
+      - href: recomendacoes.qmd
+        text: Recomendações
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

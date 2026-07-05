@@ -1,0 +1,15 @@
+---
+title: "Recomendações"
+---
+
+# Recomendações
+
+Após a previsão realizada pelo modelo, esta página apresentará recomendações de irrigação de acordo com o resultado obtido.
+
+Exemplos:
+
+- Irrigação baixa
+
+- Irrigação média
+
+- Irrigação alta

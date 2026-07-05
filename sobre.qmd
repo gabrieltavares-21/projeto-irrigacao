@@ -1,0 +1,87 @@
+---
+title: "Sobre o Projeto"
+---
+
+# Sobre o Projeto
+
+## Objetivo
+
+O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.
+
+A proposta consiste em:
+
+- compreender o comportamento das variáveis do conjunto de dados;
+- identificar padrões relacionados à necessidade de irrigação;
+- desenvolver um modelo capaz de prever o nível de irrigação necessário;
+- disponibilizar essas informações em um ambiente web interativo.
+
+---
+
+## Base de Dados
+
+O conjunto de dados utilizado foi obtido na competição **Kaggle Playground Series - Season 6, Episode 4**.
+
+Essa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.
+
+**Fonte dos dados:**
+
+<a href="https://www.kaggle.com/competitions/playground-series-s6e4/data">
+  https://www.kaggle.com/competitions/playground-series-s6e4/data
+</a>
+
+---
+
+## Variáveis do Conjunto de Dados
+
+| Variável | Descrição |
+|----------|-----------|
+| `Crop_Type` | Tipo de cultura agrícola. |
+| `Soil_Type` | Tipo de solo utilizado no cultivo. |
+| `Region` | Região onde a cultura está localizada. |
+| `Temperature` | Temperatura ambiente (°C). |
+| `Weather_Condition` | Condição climática observada. |
+| `Humidity` | Umidade relativa do ar (%). |
+| `Wind_Speed` | Velocidade do vento. |
+| `Precipitation` | Volume de precipitação (chuva). |
+| `Irrigation_Need` | Nível de irrigação necessário (variável resposta). |
+
+---
+
+## Fluxo do Projeto
+
+O desenvolvimento deste trabalho foi dividido em quatro etapas principais.
+
+1. Exploração e compreensão dos dados.
+
+2. Análise estatística e visualização.
+
+3. Construção de um modelo estatístico.
+
+4. Desenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário.
+
+---
+
+## Objetivo do Website
+
+O website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.
+
+Nele será possível:
+
+- conhecer a base de dados utilizada;
+- visualizar os principais resultados da análise exploratória;
+- realizar simulações utilizando um modelo preditivo;
+- obter recomendações de irrigação com base nas características informadas pelo usuário.
+
+---
+
+## Tecnologias Utilizadas
+
+Durante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-Learn
+- Quarto
+- Git e GitHub

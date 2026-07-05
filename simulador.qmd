@@ -1,0 +1,65 @@
+---
+title: "Simulador"
+---
+
+# Simulador
+
+## Objetivo
+
+O simulador foi concebido como um produto de dados para auxiliar na recomendação da necessidade de irrigação de uma cultura agrícola. A partir de informações relacionadas ao solo, às condições climáticas e ao tipo de cultivo, o modelo de classificação estima a categoria de necessidade de irrigação, classificando-a em **Low**, **Medium** ou **High**.
+
+## Como o simulador funciona
+
+O funcionamento do produto segue as seguintes etapas:
+
+```{mermaid}
+flowchart TD
+    A[Entrada dos dados] --> B[Pré-processamento]
+    B --> C[Modelo de Classificação]
+    C --> D[Predição]
+    D --> E[Recomendação da necessidade de irrigação]
+```
+
+## Informações que serão utilizadas
+
+Na versão final do simulador, o usuário poderá informar variáveis como:
+
+- Temperatura;
+- Umidade do ar;
+- Umidade do solo;
+- Tipo de solo;
+- Tipo de cultura;
+- Quantidade de chuva;
+- Demais variáveis utilizadas pelo modelo.
+
+Essas informações serão processadas pelo modelo treinado durante este projeto.
+
+## Resultado esperado
+
+Após o processamento dos dados informados, o sistema apresentará:
+
+- A classe prevista (**Low**, **Medium** ou **High**);
+- A probabilidade associada à previsão;
+- Uma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação.
+
+## Protótipo da interface
+
+| Campo | Exemplo |
+|--------|---------|
+| Temperatura (°C) | 30 |
+| Umidade (%) | 45 |
+| Tipo de solo | Sandy |
+| Tipo de cultura | Rice |
+| Chuva (mm) | 8 |
+
+[🔗 Abrir Simulador](http://127.0.0.1:8000)
+
+**Saída esperada**
+
+> Necessidade de irrigação: **High**
+
+> Probabilidade da previsão: **87%**
+
+## Desenvolvimento futuro
+
+Nesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo.
