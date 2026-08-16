@@ -2,16 +2,37 @@
   {
     "objectID": "recomendacoes.html",
     "href": "recomendacoes.html",
-    "title": "Recomendações",
+    "title": "Modelos Preditivos",
     "section": "",
-    "text": "Recomendações\nApós a previsão realizada pelo modelo, esta página apresentará recomendações de irrigação de acordo com o resultado obtido.\nExemplos:\n\nIrrigação baixa\nIrrigação média\nIrrigação alta"
+    "text": "Nesta seção, apresentamos o desempenho de dois modelos de Machine Learning desenvolvidos para classificar nossos dados nas categorias High, Low e Medium.\nAbaixo estão as principais métricas e resultados alcançados por cada modelo."
+  },
+  {
+    "objectID": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
+    "href": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
+    "title": "Modelos Preditivos",
+    "section": "1. Modelo Inicial (Regressão Logística Multinomial)",
+    "text": "1. Modelo Inicial (Regressão Logística Multinomial)\nO primeiro modelo construído serviu como nossa base de comparação. Ele conseguiu capturar bem a classe majoritária, mas teve dificuldades com as categorias de menor volume.\n\nAcurácia Global: 71,13%\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.58\n0.16\n0.25\n6.303\n\n\nLow\n0.76\n0.83\n0.79\n110.975\n\n\nMedium\n0.63\n0.58\n0.61\n71.722\n\n\n\n\nInsight Regressão Logística: O modelo teve um bom desempenho na classe Low (acertou 83% dos casos reais). No entanto, a classe High foi um grande desafio, com o modelo conseguindo identificar apenas 16% dos casos reais dessa categoria."
+  },
+  {
+    "objectID": "recomendacoes.html#modelo-otimizado-random-forest",
+    "href": "recomendacoes.html#modelo-otimizado-random-forest",
+    "title": "Modelos Preditivos",
+    "section": "2. Modelo Otimizado (Random Forest)",
+    "text": "2. Modelo Otimizado (Random Forest)\nPara melhorar a capacidade de predição, especialmente nas classes mais difíceis, implementamos um algoritmo de Random Forest. Tivemos um salto significativo no desempenho geral.\n\nAcurácia Global: 76,14% 📈 (Aumento de ~5%)\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.84\n0.31\n0.45\n6.303\n\n\nLow\n0.76\n0.92\n0.83\n110.975\n\n\nMedium\n0.75\n0.56\n0.64\n71.722\n\n\n\n\nInsight do Random Forest: * Houve um salto excelente na classe High: a precisão subiu de 0.58 para 0.84 (quando o modelo diz que é High, ele acerta 84% das vezes). O Recall também dobrou (de 16% para 31%). * A identificação da classe Low ficou ainda mais forte, pulando para 92% de Recall. * A precisão na classe Medium também apresentou melhoria substancial (de 0.63 para 0.75)."
+  },
+  {
+    "objectID": "recomendacoes.html#conclusão",
+    "href": "recomendacoes.html#conclusão",
+    "title": "Modelos Preditivos",
+    "section": "Conclusão",
+    "text": "Conclusão\nA transição para o algoritmo Random Forest provou ser a decisão correta. Além de melhorar a acurácia geral para mais de 76%, ele reduziu drasticamente os “falsos positivos” da classe High, entregando um modelo muito mais confiável e equilibrado para a tomada de decisão."
   },
   {
     "objectID": "sobre.html",
     "href": "sobre.html",
     "title": "Sobre o Projeto",
     "section": "",
-    "text": "O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.\nA proposta consiste em:\n\ncompreender o comportamento das variáveis do conjunto de dados;\nidentificar padrões relacionados à necessidade de irrigação;\ndesenvolver um modelo capaz de prever o nível de irrigação necessário;\ndisponibilizar essas informações em um ambiente web interativo.\n\n\n\n\n\nO conjunto de dados utilizado foi obtido na competição Kaggle Playground Series - Season 6, Episode 4.\nEssa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.\nFonte dos dados:\n https://www.kaggle.com/competitions/playground-series-s6e4/data \n\n\n\n\n\n\n\n\n\n\n\nVariável\nDescrição\n\n\n\n\nCrop_Type\nTipo de cultura agrícola.\n\n\nSoil_Type\nTipo de solo utilizado no cultivo.\n\n\nRegion\nRegião onde a cultura está localizada.\n\n\nTemperature\nTemperatura ambiente (°C).\n\n\nWeather_Condition\nCondição climática observada.\n\n\nHumidity\nUmidade relativa do ar (%).\n\n\nWind_Speed\nVelocidade do vento.\n\n\nPrecipitation\nVolume de precipitação (chuva).\n\n\nIrrigation_Need\nNível de irrigação necessário (variável resposta).\n\n\n\n\n\n\n\nO desenvolvimento deste trabalho foi dividido em quatro etapas principais.\n\nExploração e compreensão dos dados.\nAnálise estatística e visualização.\nConstrução de um modelo estatístico.\nDesenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário.\n\n\n\n\n\nO website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.\nNele será possível:\n\nconhecer a base de dados utilizada;\nvisualizar os principais resultados da análise exploratória;\nrealizar simulações utilizando um modelo preditivo;\nobter recomendações de irrigação com base nas características informadas pelo usuário.\n\n\n\n\n\nDurante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:\n\nPython\nPandas\nNumPy\nMatplotlib\nScikit-Learn\nQuarto\nGit e GitHub"
+    "text": "O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.\nA proposta consiste em:\n\ncompreender o comportamento das variáveis do conjunto de dados;\nidentificar padrões relacionados à necessidade de irrigação;\ndesenvolver um modelo capaz de prever o nível de irrigação necessário;\ndisponibilizar essas informações em um ambiente web interativo.\n\n\n\n\n\nO conjunto de dados utilizado foi obtido na competição Kaggle Playground Series - Season 6, Episode 4.\nEssa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.\nFonte dos dados:\n https://www.kaggle.com/competitions/playground-series-s6e4/data \n\n\n\n\n\n\n\n\n\n\n\nVariável\nDescrição\n\n\n\n\nCrop_Type\nTipo de cultura agrícola.\n\n\nSoil_Type\nTipo de solo utilizado no cultivo.\n\n\nRegion\nRegião onde a cultura está localizada.\n\n\nTemperature\nTemperatura ambiente (°C).\n\n\nWeather_Condition\nCondição climática observada.\n\n\nHumidity\nUmidade relativa do ar (%).\n\n\nWind_Speed\nVelocidade do vento.\n\n\nPrecipitation\nVolume de precipitação (chuva).\n\n\nIrrigation_Need\nNível de irrigação necessário (variável resposta).\n\n\n\n\n\n\n\nO desenvolvimento deste trabalho foi dividido em quatro etapas principais.\n\nExploração e compreensão dos dados.\nAnálise estatística e visualização.\nConstrução de um modelo estatístico.\nDesenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário.\n\n\n\n\n\nO website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.\nNele será possível:\n\nconhecer a base de dados utilizada;\nvisualizar os principais resultados da análise exploratória;\nrealizar simulações utilizando um modelo preditivo;\nobter recomendações de irrigação com base nas características informadas pelo usuário.\n\n\n\n\n\n\nLinguagem e Manipulação de Dados: Python, Pandas, NumPy, Matplotlib.\nMachine Learning: Scikit-Learn.\nDocumentação e Apresentação: Quarto.\nAPI, Infraestrutura e Deploy: FastAPI,JSON, Docker, Render.\nVersionamento: Git e GitHub."
   },
   {
     "objectID": "sobre.html#objetivo",
@@ -53,14 +74,28 @@
     "href": "sobre.html#tecnologias-utilizadas",
     "title": "Sobre o Projeto",
     "section": "",
-    "text": "Durante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:\n\nPython\nPandas\nNumPy\nMatplotlib\nScikit-Learn\nQuarto\nGit e GitHub"
+    "text": "Linguagem e Manipulação de Dados: Python, Pandas, NumPy, Matplotlib.\nMachine Learning: Scikit-Learn.\nDocumentação e Apresentação: Quarto.\nAPI, Infraestrutura e Deploy: FastAPI,JSON, Docker, Render.\nVersionamento: Git e GitHub."
+  },
+  {
+    "objectID": "home.html",
+    "href": "home.html",
+    "title": "AquaSignal",
+    "section": "",
+    "text": "Bem-vindo à AquaSignal.\nSomos uma consultoria em dados focada em transformar informações em decisões estratégicas por meio de Estatística, Machine Learning e análises avançadas.\n(Projeto acadêmico desenvolvido para a disciplina de Consultoria Estatística - [UEPB])"
+  },
+  {
+    "objectID": "home.html#nossa-equipe",
+    "href": "home.html#nossa-equipe",
+    "title": "AquaSignal",
+    "section": "Nossa Equipe",
+    "text": "Nossa Equipe\n\n👤 [Alice Vitória] – Cientista de Dados | GitHub\n👤 [Gabriel Tavares] – Cientista de Dados | GitHub"
   },
   {
     "objectID": "simulador.html",
     "href": "simulador.html",
     "title": "Simulador",
     "section": "",
-    "text": "O simulador foi concebido como um produto de dados para auxiliar na recomendação da necessidade de irrigação de uma cultura agrícola. A partir de informações relacionadas ao solo, às condições climáticas e ao tipo de cultivo, o modelo de classificação estima a categoria de necessidade de irrigação, classificando-a em Low, Medium ou High.\n\n\n\nO funcionamento do produto segue as seguintes etapas:\n\n\n\n\n\nflowchart TD\n    A[Entrada dos dados] --&gt; B[Pré-processamento]\n    B --&gt; C[Modelo de Classificação]\n    C --&gt; D[Predição]\n    D --&gt; E[Recomendação da necessidade de irrigação]\n\n\n\n\n\n\n\n\n\nNa versão final do simulador, o usuário poderá informar variáveis como:\n\nTemperatura;\nUmidade do ar;\nUmidade do solo;\nTipo de solo;\nTipo de cultura;\nQuantidade de chuva;\nDemais variáveis utilizadas pelo modelo.\n\nEssas informações serão processadas pelo modelo treinado durante este projeto.\n\n\n\nApós o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nA probabilidade associada à previsão;\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação.\n\n\n\n\n\n\n\nCampo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High\n\n\nProbabilidade da previsão: 87%\n\n\n\n\nNesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo."
+    "text": "O simulador foi concebido como um produto de dados para auxiliar na recomendação da necessidade de irrigação de uma cultura agrícola. A partir de informações relacionadas ao solo, às condições climáticas e ao tipo de cultivo, o modelo de classificação estima a categoria de necessidade de irrigação, classificando-a em Low, Medium ou High.\n\n\n\nO funcionamento do produto segue as seguintes etapas:\n\n\n\n\n\nflowchart TD\n    A[Entrada dos dados] --&gt; B[Pré-processamento]\n    B --&gt; C[Modelo de Classificação]\n    C --&gt; D[Predição]\n    D --&gt; E[Recomendação da necessidade de irrigação]\n\n\n\n\n\n\n\n\n\nNa versão final do simulador, o usuário poderá informar variáveis como:\n\nTemperatura;\nUmidade do ar;\nUmidade do solo;\nTipo de solo;\nTipo de cultura;\nQuantidade de chuva;\nDemais variáveis utilizadas pelo modelo.\n\nEssas informações serão processadas pelo modelo treinado durante este projeto.\n\n\n\nApós o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação.\n\n\n\n\n\n\n\nCampo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High"
   },
   {
     "objectID": "simulador.html#objetivo",
@@ -88,21 +123,14 @@
     "href": "simulador.html#resultado-esperado",
     "title": "Simulador",
     "section": "",
-    "text": "Após o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nA probabilidade associada à previsão;\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação."
+    "text": "Após o processamento dos dados informados, o sistema apresentará:\n\nA classe prevista (Low, Medium ou High);\nUma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação."
   },
   {
     "objectID": "simulador.html#protótipo-da-interface",
     "href": "simulador.html#protótipo-da-interface",
     "title": "Simulador",
     "section": "",
-    "text": "Campo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High\n\n\nProbabilidade da previsão: 87%"
-  },
-  {
-    "objectID": "simulador.html#desenvolvimento-futuro",
-    "href": "simulador.html#desenvolvimento-futuro",
-    "title": "Simulador",
-    "section": "",
-    "text": "Nesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo."
+    "text": "Campo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High"
   },
   {
     "objectID": "analise.html",
@@ -172,7 +200,7 @@
     "href": "index.html",
     "title": "Sistema Inteligente de Irrigação",
     "section": "",
-    "text": "Este projeto utiliza técnicas de Ciência de Dados para analisar fatores que influenciam a necessidade de irrigação agrícola.\nO sistema foi desenvolvido para ser utilizado por agricultores que desejam otimizar o uso da água na agricultura, e possui três objetivos principais:\n\nrealizar uma análise exploratória dos dados;\ncompreender os fatores associados à necessidade de irrigação;\npermitir que o usuário simule diferentes cenários por meio de um modelo preditivo.\n\n\n\n\nUtilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nRecomendações"
+    "text": "Este projeto utiliza técnicas de Ciência de Dados para analisar fatores que influenciam a necessidade de irrigação agrícola.\nO sistema foi desenvolvido para ser utilizado por agricultores que desejam otimizar o uso da água na agricultura, e possui três objetivos principais:\n\nrealizar uma análise exploratória dos dados;\ncompreender os fatores associados à necessidade de irrigação;\npermitir que o usuário simule diferentes cenários por meio de um modelo preditivo.\n\n\n\n\nUtilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nModelos"
   },
   {
     "objectID": "index.html#objetivo",
@@ -186,6 +214,6 @@
     "href": "index.html#navegação",
     "title": "Sistema Inteligente de Irrigação",
     "section": "",
-    "text": "Utilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nRecomendações"
+    "text": "Utilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nModelos"
   }
 ]

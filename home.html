@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sobre o Projeto – Sistema Inteligente de Irrigação</title>
+<title>AquaSignal – Sistema Inteligente de Irrigação</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./home.html"> 
+    <a class="nav-link active" href="./home.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Objetivo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./sobre.html" aria-current="page"> 
+    <a class="nav-link" href="./sobre.html"> 
 <span class="menu-text">Sobre</span></a>
   </li>  
   <li class="nav-item">
@@ -132,15 +132,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sobre-o-projeto" id="toc-sobre-o-projeto" class="nav-link active" data-scroll-target="#sobre-o-projeto">Sobre o Projeto</a>
-  <ul class="collapse">
-  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
-  <li><a href="#base-de-dados" id="toc-base-de-dados" class="nav-link" data-scroll-target="#base-de-dados">Base de Dados</a></li>
-  <li><a href="#variáveis-do-conjunto-de-dados" id="toc-variáveis-do-conjunto-de-dados" class="nav-link" data-scroll-target="#variáveis-do-conjunto-de-dados">Variáveis do Conjunto de Dados</a></li>
-  <li><a href="#fluxo-do-projeto" id="toc-fluxo-do-projeto" class="nav-link" data-scroll-target="#fluxo-do-projeto">Fluxo do Projeto</a></li>
-  <li><a href="#objetivo-do-website" id="toc-objetivo-do-website" class="nav-link" data-scroll-target="#objetivo-do-website">Objetivo do Website</a></li>
-  <li><a href="#tecnologias-utilizadas" id="toc-tecnologias-utilizadas" class="nav-link" data-scroll-target="#tecnologias-utilizadas">Tecnologias Utilizadas</a></li>
-  </ul></li>
+  <li><a href="#nossa-equipe" id="toc-nossa-equipe" class="nav-link active" data-scroll-target="#nossa-equipe">Nossa Equipe</a></li>
   </ul>
 </nav>
     </div>
@@ -149,7 +141,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sobre o Projeto</h1>
+<h1 class="title">AquaSignal</h1>
+<p class="subtitle lead">Inteligência em Dados e Estratégia</p>
 </div>
 
 
@@ -166,117 +159,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sobre-o-projeto" class="level1">
-<h1>Sobre o Projeto</h1>
-<section id="objetivo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>O objetivo deste projeto é analisar os fatores que influenciam a necessidade de irrigação em diferentes cenários agrícolas por meio de técnicas estatísticas.</p>
-<p>A proposta consiste em:</p>
+<p>Bem-vindo à <strong>AquaSignal</strong>.</p>
+<p>Somos uma consultoria em dados focada em transformar informações em decisões estratégicas por meio de Estatística, Machine Learning e análises avançadas.</p>
+<p><em>(Projeto acadêmico desenvolvido para a disciplina de Consultoria Estatística - [UEPB])</em></p>
+<hr>
+<section id="nossa-equipe" class="level2">
+<h2 class="anchored" data-anchor-id="nossa-equipe">Nossa Equipe</h2>
 <ul>
-<li>compreender o comportamento das variáveis do conjunto de dados;</li>
-<li>identificar padrões relacionados à necessidade de irrigação;</li>
-<li>desenvolver um modelo capaz de prever o nível de irrigação necessário;</li>
-<li>disponibilizar essas informações em um ambiente web interativo.</li>
+<li>👤 <strong>[Alice Vitória]</strong> – Cientista de Dados | <a href="#">GitHub</a></li>
+<li>👤 <strong>[Gabriel Tavares]</strong> – Cientista de Dados | <a href="https://github.com/gabrieltavares-21">GitHub</a></li>
 </ul>
 <hr>
-</section>
-<section id="base-de-dados" class="level2">
-<h2 class="anchored" data-anchor-id="base-de-dados">Base de Dados</h2>
-<p>O conjunto de dados utilizado foi obtido na competição <strong>Kaggle Playground Series - Season 6, Episode 4</strong>.</p>
-<p>Essa base contém informações relacionadas às condições ambientais, características do solo e da cultura cultivada, permitindo estudar como esses fatores influenciam a necessidade de irrigação.</p>
-<p><strong>Fonte dos dados:</strong></p>
-<p><a href="https://www.kaggle.com/competitions/playground-series-s6e4/data"> https://www.kaggle.com/competitions/playground-series-s6e4/data </a></p>
-<hr>
-</section>
-<section id="variáveis-do-conjunto-de-dados" class="level2">
-<h2 class="anchored" data-anchor-id="variáveis-do-conjunto-de-dados">Variáveis do Conjunto de Dados</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 52%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variável</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>Crop_Type</code></td>
-<td>Tipo de cultura agrícola.</td>
-</tr>
-<tr class="even">
-<td><code>Soil_Type</code></td>
-<td>Tipo de solo utilizado no cultivo.</td>
-</tr>
-<tr class="odd">
-<td><code>Region</code></td>
-<td>Região onde a cultura está localizada.</td>
-</tr>
-<tr class="even">
-<td><code>Temperature</code></td>
-<td>Temperatura ambiente (°C).</td>
-</tr>
-<tr class="odd">
-<td><code>Weather_Condition</code></td>
-<td>Condição climática observada.</td>
-</tr>
-<tr class="even">
-<td><code>Humidity</code></td>
-<td>Umidade relativa do ar (%).</td>
-</tr>
-<tr class="odd">
-<td><code>Wind_Speed</code></td>
-<td>Velocidade do vento.</td>
-</tr>
-<tr class="even">
-<td><code>Precipitation</code></td>
-<td>Volume de precipitação (chuva).</td>
-</tr>
-<tr class="odd">
-<td><code>Irrigation_Need</code></td>
-<td>Nível de irrigação necessário (variável resposta).</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="fluxo-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="fluxo-do-projeto">Fluxo do Projeto</h2>
-<p>O desenvolvimento deste trabalho foi dividido em quatro etapas principais.</p>
-<ol type="1">
-<li><p>Exploração e compreensão dos dados.</p></li>
-<li><p>Análise estatística e visualização.</p></li>
-<li><p>Construção de um modelo estatístico.</p></li>
-<li><p>Desenvolvimento de uma aplicação web para disponibilizar os resultados ao usuário.</p></li>
-</ol>
-<hr>
-</section>
-<section id="objetivo-do-website" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo-do-website">Objetivo do Website</h2>
-<p>O website tem como finalidade reunir todas as etapas do projeto em uma única aplicação.</p>
-<p>Nele será possível:</p>
-<ul>
-<li>conhecer a base de dados utilizada;</li>
-<li>visualizar os principais resultados da análise exploratória;</li>
-<li>realizar simulações utilizando um modelo preditivo;</li>
-<li>obter recomendações de irrigação com base nas características informadas pelo usuário.</li>
-</ul>
-<hr>
-</section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<ul>
-<li><p>Linguagem e Manipulação de Dados: Python, Pandas, NumPy, Matplotlib.</p></li>
-<li><p>Machine Learning: Scikit-Learn.</p></li>
-<li><p>Documentação e Apresentação: Quarto.</p></li>
-<li><p>API, Infraestrutura e Deploy: FastAPI,JSON, Docker, Render.</p></li>
-<li><p>Versionamento: Git e GitHub.</p></li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
