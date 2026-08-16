@@ -7,6 +7,27 @@
     "text": "Nesta seção, apresentamos o desempenho de dois modelos de Machine Learning desenvolvidos para classificar nossos dados nas categorias High, Low e Medium.\nAbaixo estão as principais métricas e resultados alcançados por cada modelo."
   },
   {
+    "objectID": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
+    "href": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
+    "title": "Modelos Preditivos",
+    "section": "1. Modelo Inicial (Regressão Logística Multinomial)",
+    "text": "1. Modelo Inicial (Regressão Logística Multinomial)\nO primeiro modelo construído serviu como nossa base de comparação. Ele conseguiu capturar bem a classe majoritária, mas teve dificuldades com as categorias de menor volume.\n\nAcurácia Global: 71,13%\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.58\n0.16\n0.25\n6.303\n\n\nLow\n0.76\n0.83\n0.79\n110.975\n\n\nMedium\n0.63\n0.58\n0.61\n71.722\n\n\n\n\nInsight Regressão Logística: O modelo teve um bom desempenho na classe Low (acertou 83% dos casos reais). No entanto, a classe High foi um grande desafio, com o modelo conseguindo identificar apenas 16% dos casos reais dessa categoria."
+  },
+  {
+    "objectID": "recomendacoes.html#modelo-otimizado-random-forest",
+    "href": "recomendacoes.html#modelo-otimizado-random-forest",
+    "title": "Modelos Preditivos",
+    "section": "2. Modelo Otimizado (Random Forest)",
+    "text": "2. Modelo Otimizado (Random Forest)\nPara melhorar a capacidade de predição, especialmente nas classes mais difíceis, implementamos um algoritmo de Random Forest. Tivemos um salto significativo no desempenho geral.\n\nAcurácia Global: 76,14% 📈 (Aumento de ~5%)\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.84\n0.31\n0.45\n6.303\n\n\nLow\n0.76\n0.92\n0.83\n110.975\n\n\nMedium\n0.75\n0.56\n0.64\n71.722\n\n\n\n\nInsight do Random Forest: * Houve um salto excelente na classe High: a precisão subiu de 0.58 para 0.84 (quando o modelo diz que é High, ele acerta 84% das vezes). O Recall também dobrou (de 16% para 31%). * A identificação da classe Low ficou ainda mais forte, pulando para 92% de Recall. * A precisão na classe Medium também apresentou melhoria substancial (de 0.63 para 0.75)."
+  },
+  {
+    "objectID": "recomendacoes.html#conclusão",
+    "href": "recomendacoes.html#conclusão",
+    "title": "Modelos Preditivos",
+    "section": "Conclusão",
+    "text": "Conclusão\nA transição para o algoritmo Random Forest provou ser a decisão correta. Além de melhorar a acurácia geral para mais de 76%, ele reduziu drasticamente os “falsos positivos” da classe High, entregando um modelo muito mais confiável e equilibrado para a tomada de decisão."
+  },
+  {
     "objectID": "sobre.html",
     "href": "sobre.html",
     "title": "Sobre o Projeto",
@@ -56,6 +77,20 @@
     "text": "Linguagem e Manipulação de Dados: Python, Pandas, NumPy, Matplotlib.\nMachine Learning: Scikit-Learn.\nDocumentação e Apresentação: Quarto.\nAPI, Infraestrutura e Deploy: FastAPI,JSON, Docker, Render.\nVersionamento: Git e GitHub."
   },
   {
+    "objectID": "home.html",
+    "href": "home.html",
+    "title": "AquaSignal",
+    "section": "",
+    "text": "Bem-vindo à AquaSignal.\nSomos uma consultoria em dados focada em transformar informações em decisões estratégicas por meio de Estatística, Machine Learning e análises avançadas.\n(Projeto acadêmico desenvolvido para a disciplina de Consultoria Estatística - [UEPB])"
+  },
+  {
+    "objectID": "home.html#nossa-equipe",
+    "href": "home.html#nossa-equipe",
+    "title": "AquaSignal",
+    "section": "Nossa Equipe",
+    "text": "Nossa Equipe\n\n👤 [Alice Vitória] – Cientista de Dados | GitHub\n👤 [Gabriel Tavares] – Cientista de Dados | GitHub"
+  },
+  {
     "objectID": "simulador.html",
     "href": "simulador.html",
     "title": "Simulador",
@@ -96,13 +131,6 @@
     "title": "Simulador",
     "section": "",
     "text": "Campo\nExemplo\n\n\n\n\nTemperatura (°C)\n30\n\n\nUmidade (%)\n45\n\n\nTipo de solo\nSandy\n\n\nTipo de cultura\nRice\n\n\nChuva (mm)\n8\n\n\n\n🔗 Abrir Simulador\nSaída esperada\n\nNecessidade de irrigação: High"
-  },
-  {
-    "objectID": "simulador.html#desenvolvimento-futuro",
-    "href": "simulador.html#desenvolvimento-futuro",
-    "title": "Simulador",
-    "section": "",
-    "text": "Nesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo."
   },
   {
     "objectID": "analise.html",
@@ -187,47 +215,5 @@
     "title": "Sistema Inteligente de Irrigação",
     "section": "",
     "text": "Utilize o menu superior para acessar as páginas do projeto.\n\nSobre\nAnálise\nSimulador\nModelos"
-  },
-  {
-    "objectID": "recomendacoes.html#modelo-inicial-baseline",
-    "href": "recomendacoes.html#modelo-inicial-baseline",
-    "title": "Modelos Preditivos",
-    "section": "1. Modelo Inicial (Baseline)",
-    "text": "1. Modelo Inicial (Baseline)\nO primeiro modelo construído serviu como nossa base de comparação. Ele conseguiu capturar bem a classe majoritária, mas teve dificuldades com as categorias de menor volume.\n\nAcurácia Global: 71,13%\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.58\n0.16\n0.25\n6.303\n\n\nLow\n0.76\n0.83\n0.79\n110.975\n\n\nMedium\n0.63\n0.58\n0.61\n71.722\n\n\n\n\nInsight: O modelo teve um bom desempenho na classe Low (acertou 83% dos casos reais). No entanto, a classe High foi um grande desafio, com o modelo conseguindo identificar apenas 16% dos casos reais dessa categoria."
-  },
-  {
-    "objectID": "recomendacoes.html#modelo-otimizado-random-forest",
-    "href": "recomendacoes.html#modelo-otimizado-random-forest",
-    "title": "Modelos Preditivos",
-    "section": "2. Modelo Otimizado (Random Forest)",
-    "text": "2. Modelo Otimizado (Random Forest)\nPara melhorar a capacidade de predição, especialmente nas classes mais difíceis, implementamos um algoritmo de Random Forest. Tivemos um salto significativo no desempenho geral.\n\nAcurácia Global: 76,14% 📈 (Aumento de ~5%)\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.84\n0.31\n0.45\n6.303\n\n\nLow\n0.76\n0.92\n0.83\n110.975\n\n\nMedium\n0.75\n0.56\n0.64\n71.722\n\n\n\n\nInsight do Random Forest: * Houve um salto excelente na classe High: a precisão subiu de 0.58 para 0.84 (quando o modelo diz que é High, ele acerta 84% das vezes). O Recall também dobrou (de 16% para 31%). * A identificação da classe Low ficou ainda mais forte, pulando para 92% de Recall. * A precisão na classe Medium também apresentou melhoria substancial (de 0.63 para 0.75)."
-  },
-  {
-    "objectID": "recomendacoes.html#conclusão",
-    "href": "recomendacoes.html#conclusão",
-    "title": "Modelos Preditivos",
-    "section": "Conclusão",
-    "text": "Conclusão\nA transição para o algoritmo Random Forest provou ser a decisão correta. Além de melhorar a acurácia geral para mais de 76%, ele reduziu drasticamente os “falsos positivos” da classe High, entregando um modelo muito mais confiável e equilibrado para a tomada de decisão."
-  },
-  {
-    "objectID": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
-    "href": "recomendacoes.html#modelo-inicial-regressão-logística-multinomial",
-    "title": "Modelos Preditivos",
-    "section": "1. Modelo Inicial (Regressão Logística Multinomial)",
-    "text": "1. Modelo Inicial (Regressão Logística Multinomial)\nO primeiro modelo construído serviu como nossa base de comparação. Ele conseguiu capturar bem a classe majoritária, mas teve dificuldades com as categorias de menor volume.\n\nAcurácia Global: 71,13%\n\n\nDesempenho por Classe (Relatório de Classificação)\n\n\n\n\n\n\n\n\n\n\nClasse\nPrecisão (Precision)\nRevocação (Recall)\nF1-Score\nSuporte (Qtd)\n\n\n\n\nHigh\n0.58\n0.16\n0.25\n6.303\n\n\nLow\n0.76\n0.83\n0.79\n110.975\n\n\nMedium\n0.63\n0.58\n0.61\n71.722\n\n\n\n\nInsight Regressão Logística: O modelo teve um bom desempenho na classe Low (acertou 83% dos casos reais). No entanto, a classe High foi um grande desafio, com o modelo conseguindo identificar apenas 16% dos casos reais dessa categoria."
-  },
-  {
-    "objectID": "home.html",
-    "href": "home.html",
-    "title": "AquaSignal",
-    "section": "",
-    "text": "Bem-vindo à AquaSignal.\nSomos uma consultoria em dados focada em transformar informações em decisões estratégicas por meio de Estatística, Machine Learning e análises avançadas.\n(Projeto acadêmico desenvolvido para a disciplina de Consultoria Estatística - [UEPB])"
-  },
-  {
-    "objectID": "home.html#nossa-equipe",
-    "href": "home.html#nossa-equipe",
-    "title": "AquaSignal",
-    "section": "Nossa Equipe",
-    "text": "Nossa Equipe\n\n👤 [Alice Vitória] – Cientista de Dados | GitHub\n👤 [Gabriel Tavares] – Cientista de Dados | GitHub"
   }
 ]
