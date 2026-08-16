@@ -21,4 +21,4 @@ Utilize o menu superior para acessar as páginas do projeto.
 - Sobre
 - Análise
 - Simulador
-- Recomendações
+- Modelos

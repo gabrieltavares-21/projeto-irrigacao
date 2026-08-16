@@ -2,9 +2,9 @@ from shiny import App, ui, render, reactive
 import pandas as pd
 import joblib
 
-modelo = joblib.load("modelo.pkl")
-
-print(modelo.classes_)
+# 1. Carregando o dicionário com os dois modelos (usando joblib, que você já usava)
+# Lembre-se de gerar esse arquivo 'meus_modelos.pkl' com o script de treinamento
+modelos = joblib.load("meus_modelos.pkl")
 
 # =========================
 # UI MELHORADA
@@ -13,6 +13,15 @@ print(modelo.classes_)
 app_ui = ui.page_fluid(
 
     ui.panel_title("🌱 Sistema Inteligente de Irrigação"),
+
+    # --- 2. NOVO: Seletor de Modelo ---
+    ui.h4("Configurações da Inteligência"),
+    ui.input_select("escolha_modelo", "Selecione o Algoritmo Preditivo", {
+        "logistica": "Regressão Logística",
+        "random_forest": "Random Forest"
+    }),
+    ui.hr(),
+    # ----------------------------------
 
     ui.h4("Parâmetros da Lavoura"),
 
@@ -76,6 +85,10 @@ def server(input, output, session):
     @reactive.event(input.prever)
     def resultado():
 
+        # --- 3. NOVO: Puxando o modelo escolhido pelo usuário ---
+        modelo_atual = modelos[input.escolha_modelo()]
+        # --------------------------------------------------------
+
         novo = pd.DataFrame({
             "Soil_Type":[input.solo()],
             "Crop_Type":[input.cultura()],
@@ -86,16 +99,15 @@ def server(input, output, session):
             "Temperature_C":[input.temperatura()]
         })
 
-        pred = modelo.predict(novo)[0]
-        probs = modelo.predict_proba(novo)[0]
+        # Agora usamos 'modelo_atual' em vez de 'modelo'
+        pred = modelo_atual.predict(novo)[0]
+        probs = modelo_atual.predict_proba(novo)[0]
 
-        resultado_probs = dict(zip(modelo.classes_, probs))
+        resultado_probs = dict(zip(modelo_atual.classes_, probs))
         pred = max(resultado_probs, key=resultado_probs.get)
 
         # probabilidade máxima
         confianca = max(probs)
-
-        resultado_probs = dict(zip(modelo.classes_, probs))
 
         texto_probs = (
         f"📊 Probabilidades:\n"
@@ -104,7 +116,6 @@ def server(input, output, session):
         f"Low: {resultado_probs.get('Low', 0):.1%}\n"
         )
 
-
         if pred == "Low":
             classe = "🟢 BAIXA necessidade de irrigação"
         elif pred == "Medium":
@@ -112,7 +123,10 @@ def server(input, output, session):
         else:
             classe = "🔴 ALTA necessidade de irrigação"
 
-        return f"{classe}\nConfiança: {confianca:.1%}\n\n{texto_probs}"
+        # Adicionei uma linha no retorno para mostrar qual modelo foi usado
+        nome_modelo_usado = "Regressão Logística" if input.escolha_modelo() == "logistica" else "Random Forest"
+
+        return f"🤖 Modelo utilizado: {nome_modelo_usado}\n\n{classe}\nConfiança: {confianca:.1%}\n\n{texto_probs}"
 
 
 app = App(app_ui, server)

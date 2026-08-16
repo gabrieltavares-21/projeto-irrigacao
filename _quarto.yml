@@ -5,8 +5,11 @@ website:
   title: "Sistema Inteligente de Irrigação"
   navbar:
     left:
-      - href: index.qmd
+
+      - href: home.qmd
         text: Home
+      - href: index.qmd
+        text: Objetivo
       - href: sobre.qmd
         text: Sobre
       - href: analise.qmd
@@ -14,7 +17,7 @@ website:
       - href: simulador.qmd
         text: Simulador
       - href: recomendacoes.qmd
-        text: Recomendações
+        text: Modelos
 
 format:
   html:

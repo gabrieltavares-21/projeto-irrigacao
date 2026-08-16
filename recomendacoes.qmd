@@ -1,15 +1,48 @@
 ---
-title: "Recomendações"
+title: "Modelos Preditivos"
 ---
 
-# Recomendações
+Nesta seção, apresentamos o desempenho de dois modelos de Machine Learning desenvolvidos para classificar nossos dados nas categorias **High**, **Low** e **Medium**. 
 
-Após a previsão realizada pelo modelo, esta página apresentará recomendações de irrigação de acordo com o resultado obtido.
+Abaixo estão as principais métricas e resultados alcançados por cada modelo.
 
-Exemplos:
+## 1. Modelo Inicial (Regressão Logística Multinomial)
 
-- Irrigação baixa
+O primeiro modelo construído serviu como nossa base de comparação. Ele conseguiu capturar bem a classe majoritária, mas teve dificuldades com as categorias de menor volume.
 
-- Irrigação média
+- **Acurácia Global:** 71,13%
 
-- Irrigação alta
+### Desempenho por Classe (Relatório de Classificação)
+
+| Classe | Precisão (Precision) | Revocação (Recall) | F1-Score | Suporte (Qtd) |
+|:---|:---:|:---:|:---:|:---:|
+| **High** | 0.58 | 0.16 | 0.25 | 6.303 |
+| **Low** | 0.76 | 0.83 | 0.79 | 110.975 |
+| **Medium** | 0.63 | 0.58 | 0.61 | 71.722 |
+
+> **Insight Regressão Logística:** O modelo teve um bom desempenho na classe `Low` (acertou 83% dos casos reais). No entanto, a classe `High` foi um grande desafio, com o modelo conseguindo identificar apenas 16% dos casos reais dessa categoria.
+
+---
+
+## 2. Modelo Otimizado (Random Forest)
+
+Para melhorar a capacidade de predição, especialmente nas classes mais difíceis, implementamos um algoritmo de **Random Forest**. Tivemos um salto significativo no desempenho geral.
+
+- **Acurácia Global:** 76,14% 📈 *(Aumento de ~5%)*
+
+### Desempenho por Classe (Relatório de Classificação)
+
+| Classe | Precisão (Precision) | Revocação (Recall) | F1-Score | Suporte (Qtd) |
+|:---|:---:|:---:|:---:|:---:|
+| **High** | 0.84 | 0.31 | 0.45 | 6.303 |
+| **Low** | 0.76 | 0.92 | 0.83 | 110.975 |
+| **Medium** | 0.75 | 0.56 | 0.64 | 71.722 |
+
+> **Insight do Random Forest:** 
+> * Houve um salto excelente na classe `High`: a precisão subiu de 0.58 para 0.84 (quando o modelo diz que é High, ele acerta 84% das vezes). O Recall também dobrou (de 16% para 31%).
+> * A identificação da classe `Low` ficou ainda mais forte, pulando para 92% de Recall.
+> * A precisão na classe `Medium` também apresentou melhoria substancial (de 0.63 para 0.75).
+
+## Conclusão
+
+A transição para o algoritmo **Random Forest** provou ser a decisão correta. Além de melhorar a acurácia geral para mais de 76%, ele reduziu drasticamente os "falsos positivos" da classe *High*, entregando um modelo muito mais confiável e equilibrado para a tomada de decisão.

@@ -39,7 +39,6 @@ Essas informações serão processadas pelo modelo treinado durante este projeto
 Após o processamento dos dados informados, o sistema apresentará:
 
 - A classe prevista (**Low**, **Medium** ou **High**);
-- A probabilidade associada à previsão;
 - Uma recomendação para auxiliar na tomada de decisão sobre a necessidade de irrigação.
 
 ## Protótipo da interface
@@ -52,14 +51,8 @@ Após o processamento dos dados informados, o sistema apresentará:
 | Tipo de cultura | Rice |
 | Chuva (mm) | 8 |
 
-[🔗 Abrir Simulador](http://127.0.0.1:8000)
+[🔗 Abrir Simulador](https://irrigacao-api-previsao.onrender.com/docs#/)
 
 **Saída esperada**
 
 > Necessidade de irrigação: **High**
-
-> Probabilidade da previsão: **87%**
-
-## Desenvolvimento futuro
-
-Nesta versão do projeto, o simulador é apresentado como um protótipo conceitual do produto de dados. Em versões futuras, a interface poderá ser integrada ao modelo treinado, permitindo que o usuário realize previsões em tempo real por meio de um formulário interativo.

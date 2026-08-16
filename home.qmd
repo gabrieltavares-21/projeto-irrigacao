@@ -1,0 +1,19 @@
+---
+title: "AquaSignal"
+subtitle: "Inteligência em Dados e Estratégia"
+---
+
+Bem-vindo à **AquaSignal**. 
+
+Somos uma consultoria em dados focada em transformar informações em decisões estratégicas por meio de Estatística, Machine Learning e análises avançadas. 
+
+*(Projeto acadêmico desenvolvido para a disciplina de Consultoria Estatística - [UEPB])*
+
+---
+
+## Nossa Equipe
+
+* 👤 **[Alice Vitória]** – Cientista de Dados | [GitHub](#)
+* 👤 **[Gabriel Tavares]** – Cientista de Dados | [GitHub](https://github.com/gabrieltavares-21)
+
+---

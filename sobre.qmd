@@ -76,12 +76,12 @@ Nele será possível:
 
 ## Tecnologias Utilizadas
 
-Durante o desenvolvimento do projeto foram utilizadas as seguintes ferramentas:
+- Linguagem e Manipulação de Dados: Python, Pandas, NumPy, Matplotlib.
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-Learn
-- Quarto
-- Git e GitHub
+- Machine Learning: Scikit-Learn.
+
+- Documentação e Apresentação: Quarto.
+
+- API, Infraestrutura e Deploy: FastAPI,JSON, Docker, Render.
+
+- Versionamento: Git e GitHub.
